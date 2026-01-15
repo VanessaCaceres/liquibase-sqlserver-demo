@@ -14,7 +14,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run Liquibase validate
-        uses: liquibase/liquibase-action@v4
+        uses: uses: liquibase-github-actions/liquibase-action@v4
+
         with:
           operation: validate
           changelogFile: changelog/db.changelog-master.xml
