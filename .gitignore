@@ -1,0 +1,9 @@
+
+# NO versionar archivo con credenciales
+liquibase.properties
+
+# Archivos temporales
+*.log
+*.tmp
+.DS_Store
+Thumbs.db

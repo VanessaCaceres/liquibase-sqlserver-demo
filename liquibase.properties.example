@@ -1,0 +1,9 @@
+# Configuración de conexión (EJEMPLO - NO COMMITEAR CON CREDENCIALES REALES)
+changeLogFile=changelog/db.changelog-master.xml
+url=jdbc:sqlserver://SERVIDOR\\INSTANCIA;databaseName=nombre_bd;encrypt=false;trustServerCertificate=true
+username=tu_usuario
+password=tu_password
+driver=com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+# Configuración de Liquibase
+liquibase.hub.mode=off
