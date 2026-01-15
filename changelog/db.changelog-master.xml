@@ -7,5 +7,6 @@
 
     <!-- Incluir changesets -->
     <include file="changelog/changes/001-crear-tabla-usuarios.sql" relativeToChangelogFile="false"/>
+    <include file="changelog/changes/002-agregar-columna-telefono.sql" relativeToChangelogFile="false"/>
 
 </databaseChangeLog>
