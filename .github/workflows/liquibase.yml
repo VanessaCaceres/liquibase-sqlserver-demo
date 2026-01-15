@@ -2,7 +2,7 @@ name: Liquibase Check
 
 on:
   push:
-    branches: [ "master", "main" ]
+    branches: [ "main", "master" ]
   pull_request:
 
 jobs:
@@ -13,19 +13,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-
-      - name: Download Liquibase
-        run: |
-          curl -L https://github.com/liquibase/liquibase/releases/download/v5.0.1/liquibase-5.0.1.zip -o liquibase.zip
-          unzip liquibase.zip
-          chmod +x liquibase/liquibase
-
       - name: Run Liquibase validate
-        run: |
-          liquibase/liquibase validate
-
+        uses: liquibase/liquibase-action@v4
+        with:
+          operation: validate
+          changelogFile: changelog/db.changelog-master.xml
